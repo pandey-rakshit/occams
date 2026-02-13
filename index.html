@@ -10,7 +10,6 @@
 </head>
 <body>
 
-  <!-- Main Content -->
   <main class="container">
     <div class="page-grid">
 
@@ -30,7 +29,7 @@
           </div>
         </header>
 
-        <!-- Hero Section -->
+        <!-- Banner -->
         <section class="hero">
           <h1 class="hero-heading">
             <span class="text-gradient">Form your LLC for just the</span><br>
@@ -65,19 +64,11 @@
                   <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <ul class="custom-select-options">
-                  <li data-value="AL">Alabama</li>
-                  <li data-value="AK">Alaska</li>
-                  <li data-value="AZ">Arizona</li>
-                  <li data-value="CA">California</li>
-                  <li data-value="CO">Colorado</li>
-                  <li data-value="DE">Delaware</li>
-                  <li data-value="FL">Florida</li>
-                  <li data-value="GA">Georgia</li>
-                  <li data-value="IL">Illinois</li>
-                  <li data-value="NY">New York</li>
-                  <li data-value="TX">Texas</li>
-                  <li data-value="WA">Washington</li>
-                  <li data-value="WY">Wyoming</li>
+                  <li data-value="UK">Uttarakhand</li>
+                  <li data-value="UP">Uttar Pradesh</li>
+                  <li data-value="HP">Himachal Pradesh</li>
+                  <li data-value="HR">Haryana</li>
+                  <li data-value="DL">Delhi</li>
                 </ul>
               </div>
             </div>
@@ -180,7 +171,6 @@
           </div>
         </div>
 
-        <!-- Guarantee -->
          <section class="wrapper">
           <div class="guarantee-card">
             <div class="card-content">
@@ -232,7 +222,6 @@
       // toggle open/close
       trigger.addEventListener('click', function(e) {
         e.stopPropagation();
-        // close all other dropdowns first
         document.querySelectorAll('.custom-select.open').forEach(function(other) {
           if (other !== select) other.classList.remove('open');
         });
@@ -243,17 +232,13 @@
       options.querySelectorAll('li').forEach(function(li) {
         li.addEventListener('click', function(e) {
           e.stopPropagation();
-          // update hidden input
           hiddenInput.value = li.dataset.value;
-          // update display text
           valueSpan.textContent = li.textContent;
           valueSpan.removeAttribute('data-placeholder');
-          // mark selected
           options.querySelectorAll('li').forEach(function(item) {
             item.classList.remove('selected');
           });
           li.classList.add('selected');
-          // close
           select.classList.remove('open');
         });
       });
